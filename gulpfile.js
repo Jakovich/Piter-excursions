@@ -72,7 +72,7 @@ gulp.task("min-js", function(){
 
 
 gulp.task("image", function(){
-  return gulp.src("img/**/*.{png,jpg,gif,svg}")
+  return gulp.src("img/**/*.{png,jpg,gif}")
   .pipe(imagemin({
     optimizationLevel: 3,
     progressive: true
@@ -80,12 +80,41 @@ gulp.task("image", function(){
   .pipe(gulp.dest("build/img"));
 });
 
+gulp.task('svgmin', function () {
+    return gulp
+        .src('img/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+
+        .pipe(gulp.dest('build/img'));
+});
+
+gulp.task("copyVendor", function() {
+  gulp.src("vendor/**/*")
+  .pipe(copy())
+  .pipe(gulp.dest("build/vendor"));
+});
+
+gulp.task("copySprite", function() {
+  gulp.src("img/svgsprites/*.svg")
+  .pipe(copy())
+  .pipe(gulp.dest("build/img/svgsprites"));
+});
+
+
 gulp.task("clean", function () {
   return gulp.src("build", {read: false})
     .pipe(clean());
 });
-
-
 
 gulp.task("copyVendor", function() {
   gulp.src("vendor/**/*")
@@ -113,4 +142,4 @@ gulp.task("show", function(){
   gulp.watch("vendor/**/*.js", ["copyVendor"]).on("change", server.reload);
 });
 
-gulp.task("build", ["clean", "html", "style", "image", "copyVendor", "min-js"]);
+gulp.task("build", ["clean", "html", "style", "image", "copyVendor", "copySprite", "svgmin", "min-js"]);

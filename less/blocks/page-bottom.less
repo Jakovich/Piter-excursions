@@ -1,0 +1,52 @@
+.page-bottom__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-bottom__link {
+    width: 50%;
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 4;
+    }
+}
+
+.page-bottom__link--small {
+    width: 25%;
+}
+
+.page-bottom__title {
+    position: absolute;
+    background-color: @blue-light;
+    color: @white;
+    z-index: 5;
+    margin: 0;
+    top: 0;
+    right: 10px;
+}
+
+.page-bottom__exp {
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.6);
+    color: @white;
+    bottom: 0;
+    left:0;
+    right: 0;
+    top: 70%;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .page-bottom__link {
+        width: 100%;
+    }
+
+    .page-bottom__link--small {
+        width: 50%;
+    }
+}
