@@ -1,4 +1,30 @@
 .main-footer {
   background-color: @dark;
   color: #ffffff;
+  padding: 5px 15px;
+
+}
+
+.main-footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer__copyright {
+  font-size: 26px;
+  text-align: center;
+  flex-grow: 1;
+  margin: 10px 0;
+}
+
+.main-footer__social{
+  margin: 10px 0;
+}
+
+@media (max-width: 930px) {
+  .main-footer__content {
+    display: block;
+    text-align: center;
+  }
 }

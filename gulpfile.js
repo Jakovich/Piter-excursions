@@ -67,7 +67,12 @@ gulp.task("style", function(){
 
 
 gulp.task("min-js", function(){
-
+  gulp.src("js/main.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("main.min.js"))
+  .pipe(gulp.dest("build/js/"));
 });
 
 
@@ -102,6 +107,12 @@ gulp.task("copyVendor", function() {
   gulp.src("vendor/**/*")
   .pipe(copy())
   .pipe(gulp.dest("build/vendor"));
+});
+
+gulp.task("fonts", function(){
+  gulp.src("fonts/**/*")
+  .pipe(copy())
+  .pipe(gulp.dest("build/fonts"));
 });
 
 gulp.task("copySprite", function() {
@@ -142,4 +153,4 @@ gulp.task("show", function(){
   gulp.watch("vendor/**/*.js", ["copyVendor"]).on("change", server.reload);
 });
 
-gulp.task("build", ["clean", "html", "style", "image", "copyVendor", "copySprite", "svgmin", "min-js"]);
+gulp.task("build", ["clean", "html", "style", "fonts", "image", "copyVendor", "copySprite", "svgmin", "min-js"]);

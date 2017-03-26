@@ -1,9 +1,15 @@
 header.main-header
   .wrapper
-    .main-header__logo
-      a: img(src="img/logo.svg" width="68" height="53")
-      ul.main-nav
-        li: a(href="#") Прислать историю
-        li: a(href="#") Регистрация
-        li: a(href="#") Экскурсии дешево
-        li: a(href="#") Экскурсии дорого
+    nav.main-nav
+      .main-nav__logo
+        a(href="index.html"): img(src="img/logo.svg" width="68" height="53")
+      .main-nav__items-wrp
+        ul.main-nav__items
+          li: a(href="#") Прислать историю
+          li: a(href="#") Регистрация
+          li: a(href="#") Экскурсии дешево
+          li: a(href="#") Экскурсии дорого
+        button.main-nav__close
+          img(src="img/icon-close.svg" width="30")
+      button.main-nav__toggle
+        img(src="img/icon-menu.svg" width="30")
