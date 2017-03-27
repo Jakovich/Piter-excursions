@@ -1,38 +1,20 @@
 @import "../node_modules/normalize.less/normalize.less";
+@import "fonts.less";
 @import "variables.less";
 @import "mixins.less";
 @import "blocks/wrapper.less";
 @import "blocks/main-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/main-title.less";
+@import "blocks/main-content.less";
+@import "blocks/excursions-describe.less";
 @import "blocks/page-bottom.less";
 @import "blocks/social.less";
 @import "blocks/main-footer.less";
-
-
-
-@font-face {
-  font-family: 'PFDinDisplayPro';
-  src: url('../fonts/DinDisplay/PFDinDisplayPro-Reg.eot');
-  src: url('../fonts/DinDisplay/PFDinDisplayPro-Reg.eot?#iefix') format('embedded-opentype'),  url('../fonts/DinDisplay/PFDinDisplayPro-Reg.woff') format('woff'), url('../fonts/DinDisplay/PFDinDisplayPro-Reg.ttf') format('truetype'),
-  url('../fonts/DinDisplay/PFDinDisplayPro-Regular.otf') format('opentype'),
-   url('../fonts/DinDisplay/PFDinDisplayPro-Reg.svg?#PFDinDisplayPro-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-@font-face {
-    font-family: 'Garamond';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Garamond'), local('Garamond-Normal'),
-        url('../fonts/garamond_reg.woff') format('woff'),
-        url('../fonts/garamond_reg.ttf') format('truetype');
-}
 
 body {
   background-color: @blue;
   box-sizing: border-box;
   font-family: 'PFDinDisplayPro', sans-serif;
+  color: @text-color;
 }

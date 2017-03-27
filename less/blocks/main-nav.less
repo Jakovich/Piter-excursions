@@ -1,4 +1,11 @@
 .main-nav {
+
+    padding: 0 15px;
+
+    background-color: @dark;
+}
+
+.main-nav__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,7 +62,7 @@
     }
 }
 @media (max-width: 930px) {
-    .main-nav {
+    .main-nav__content  {
         flex-wrap: wrap;
     }
 
@@ -85,7 +92,7 @@
         z-index: 10;
         transition: @transition;
     }
-    
+
     .main-nav__items-wrp--active {
         display: block;
         .main-nav__close {

@@ -4,8 +4,10 @@ html
     title Питер экскурсии
     link(rel="stylesheet" href="css/style.min.css")
   body
-  include includes/main-header.pug
-  include includes/main-title.pug
+    header.main-header
+      include includes/main-nav.pug
+      include includes/main-title.pug
+  
   .wrapper
     include includes/page-bottom.pug
   include includes/main-footer.pug

@@ -1,0 +1,12 @@
+form.form(name="cheap-excursion" action="/" method="post")
+  .form__input-wrp
+    input.form__input(type="text" placeholder="Имя" name="name" id="name")
+  .form__input-wrp
+    input.form__input(type="text" placeholder="Телефон" name="tel" id="tel")
+  block choice
+  .form__input-wrp
+    label(for="coment") Примечание
+    textarea.form__input(name="comment" id="coment")
+  .form__btn-wrp
+    button.form__btn(type="submit") Отправить
+    
