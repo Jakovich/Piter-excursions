@@ -67,6 +67,24 @@
 
 }
 
+.excursions-describe__text--italic {
+  font-style: italic;
+}
+
+.excursions-describe__contact  {
+  font-size: 25px;
+  line-height: 32px;
+  margin-bottom: 30px;
+  a {
+    text-decoration: none;
+    color: @blue;
+    transition: @transition;
+    &:hover {
+      color: @blue-light;
+    }
+  }
+}
+
 @media (max-width: 986px) {
   .excursions-describe__content {
     flex-wrap: wrap;
