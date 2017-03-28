@@ -3,13 +3,13 @@
     block title
   a(href="#") Войти в учетную запись
 .form__input-wrp
-  input.form__input(type="text" placeholder="Имя" name="name" id="name")
+  input.form__input(type="text" required placeholder="Имя" name="name" id="name")
 .form__input-wrp
-  input.form__input(type="text" placeholder="Телефон" name="tel" id="tel")
+  input.form__input(type="text" required data-valid="phone" name="tel" id="tel")
 block choice
 div(class=["form__input-wrp", "form__input-wrp--full"])
   label(for="coment") Примечание
-  textarea.form__input(name="comment" id="coment")
+  textarea.form__input(name="comment" id="coment" rows="4")
 .form__btn-wrp
   button.form__btn(type="submit") Отправить
     

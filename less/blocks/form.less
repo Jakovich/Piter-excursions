@@ -46,6 +46,10 @@
     width: 100%;
 }
 
+.form__input--date {
+    padding-right: 47px;
+}
+
 .form__select-wrp {
     position: relative;
     margin-bottom: 26px;
@@ -64,6 +68,25 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: 17px 13px;
+        z-index: 1;
+    }
+    z-index: 1;
+}
+
+.form__date-wrp {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        background-color: @blue;
+        right: 0;
+        width: 47px;
+        background-image: url("../img/date.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 29px 29px;
         z-index: 1;
     }
     z-index: 1;
