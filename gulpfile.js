@@ -73,6 +73,12 @@ gulp.task("min-js", function(){
   .pipe(uglify())
   .pipe(rename("main.min.js"))
   .pipe(gulp.dest("build/js/"));
+  gulp.src("js/form.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("form.min.js"))
+  .pipe(gulp.dest("build/js/"));
 });
 
 
