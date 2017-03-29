@@ -1,0 +1,25 @@
+.form__title
+  h4
+    if price === 'cheap'
+      | Записаться на экскурсию
+    else 
+      | Оставить заявку здесь
+  a(href="#") Войти в учетную запись
+.form__input-wrp
+  input.form__input(type="text" placeholder="Имя" required name="name" id="name")
+.form__input-wrp
+  input.form__input(type="text" data-valid="phone" required name="tel" id="tel" placeholder="+7 (___) ___-__-__")
+if price === 'cheap'
+  .form__select-wrp
+    select.form__select(name="excursions-select")
+      option(val="1") 15.06.2017 Крымская война: PR против пушек (Москва)
+        option(val="2") 20.06.2017 НеКрымская война
+else
+  div.form__input-wrp
+    label.form__date-wrp
+      input(class=["form__input", "form__input--date"] type="text" data-valid="date" placeholder="Желаемая дата")
+div(class=["form__input-wrp", "form__input-wrp--full"])
+  label(for="coment") Примечание
+  textarea.form__input(name="comment" id="coment" rows="4")
+.form__btn-wrp
+  button.form__btn(type="submit" data-valid="submit") Отправить
