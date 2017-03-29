@@ -4,5 +4,8 @@ html
   include includes/head.pug
   body
     include includes/main-header.pug
+    - var pageActive = 'Истории';
+    - var user = 'logout';
+    include includes/page-nav.pug
     .wrapper
       main.main-content

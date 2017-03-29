@@ -1,0 +1,29 @@
+- var pageMenu = { 'Здания': '#', 'Люди': '#', 'Места': '#',  'Маршруты': '#', 'Истории': '#'};
+.wrapper
+  nav.page-nav
+      .page-nav__items-wrp
+          ul.page-nav__items
+              each val, key in pageMenu
+                  if pageActive === key
+                      li(class=["page-nav__item", "page-nav__item--active"])
+                          a(href='#', title=key)= key
+                  else
+                      li(class=["page-nav__item"])
+                          a(href=val, title=key)= key
+          button.main-nav__close
+            img(src="img/icon-close.svg" width="30")
+      if user === 'login'
+        .page-nav__user
+          span.page-nav__user-icon
+            img(src="img/user.svg" width="21" height="21")
+          a(href="#") Войти
+      else if user === 'logout'
+        .page-nav__user
+          span.page-nav__user-icon
+            img(src="img/user.svg" width="21" height="21")
+          span.page-nav__user-name Евгений
+            a(href="#") Выйти
+        
+      button.main-nav__toggle
+          img(src="img/icon-menu.svg" width="30")
+    
