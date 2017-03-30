@@ -1,0 +1,23 @@
+.form__title
+  h4
+      | Оставить свою историю
+  a(href="#") Вы вошли как Евгений. Выйти?
+.form__input-wrp
+  input.form__input(type="text" placeholder="Заголовок" required name="title" id="title")
+
+div(class=["form__input-wrp", "form__input-wrp--full"])
+  textarea.form__input(name="history" id="history" rows="6" required placeholder="Расскажите свою историю")
+.form__title
+  h4 Отметить на карте
+    button(data-role="toggle") (скрыть)
+div(class=["form__btn-wrp", "form__btn-wrp--flex"])
+  .form__upload
+    label(class=["form__btn", "form__btn--download"])
+      span.form__upload-icon
+        img(src="img/upload.svg")
+      | Прикрепить файлы
+      input(type="file" name="history-fale" data-valid="upload")
+    .form__upload-result
+      span.form__upload-path
+      button.form__upload-remove удалить
+  button(class="form__btn" type="submit" data-valid="submit") Отправить

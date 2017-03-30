@@ -16,13 +16,13 @@
         .page-nav__user
           span.page-nav__user-icon
             img(src="img/user.svg" width="21" height="21")
-          a(href="#") Войти
+          a(class="page-nav__login" href="#") Войти
       else if user === 'logout'
         .page-nav__user
           span.page-nav__user-icon
             img(src="img/user.svg" width="21" height="21")
           span.page-nav__user-name Евгений
-            a(href="#") Выйти
+          a(class="page-nav__logout" href="#")  (Выход)
         
       button.main-nav__toggle
           img(src="img/icon-menu.svg" width="30")

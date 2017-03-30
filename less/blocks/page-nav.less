@@ -36,13 +36,124 @@
 }
 
 .page-nav__items-wrp {
-    width: 70%;
+    width: 75%;
     position: relative;
 }
+
 
 .page-nav__item--active {
     a {
         color: @brown;
         text-decoration: underline;
+    }
+}
+
+
+.page-nav__user-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.page-nav__logout {
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 500;
+    color: @gray-light;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    transition: @transition;
+    &:hover {
+        color: @brown;
+    }
+}
+
+.page-nav__login {
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-nav__user-name {
+    font-size: 26px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media (max-width: 1020px) {
+    .page-nav  {
+        flex-wrap: wrap;
+    }
+
+    .page-nav__user {
+        width: 100%;
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .page-nav__items-wrp {
+        width: 100%;
+    }
+
+    .page-nav__items {
+        a {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .page-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .page-nav__user {
+        width: auto;
+    }
+
+    .main-nav__toggle {
+        display: block;
+    }
+
+    .page-nav__items-wrp {
+        position: fixed;
+        display: none;
+        left: 0;
+        right: 0;
+        top: 100px;
+        z-index: 10;
+        transition: @transition;
+    }
+
+    .page-nav__items-wrp--active {
+        display: block;
+        .main-nav__close {
+            display: block;
+        }
+    }
+
+    .page-nav__items {
+        display: block;
+
+        a {
+            display: block;
+            background-color: @gray;
+            border-bottom: 1px solid @dark;
+            padding: 25px 0;
+        }
+    }
+
+    .page-nav__close {
+        position: absolute;
+        top: 8%;
+        right: 8%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
     }
 }
