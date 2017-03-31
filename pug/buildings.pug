@@ -1,0 +1,11 @@
+doctype html
+html
+  - var pageTitle = "Прислать историю"
+  include includes/head.pug
+  body
+    include includes/main-header.pug
+    - var pageActive = 'Здания';
+    - var user = 'login';
+    include includes/page-nav.pug
+    .wrapper
+      main.main-content
