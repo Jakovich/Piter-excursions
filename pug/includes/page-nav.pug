@@ -10,7 +10,7 @@
                   else
                       li(class=["page-nav__item"])
                           a(href=val, title=key)= key
-          button.main-nav__close
+          button.nav-close(data-close="page-nav")
             img(src="img/icon-close.svg" width="30")
       if user === 'login'
         .page-nav__user
@@ -23,7 +23,6 @@
             img(src="img/user.svg" width="21" height="21")
           span.page-nav__user-name Евгений
           a(class="page-nav__logout" href="#")  (Выход)
-        
-      button.main-nav__toggle
+      button.nav-toggle(data-nav="page-nav")
           img(src="img/icon-menu.svg" width="30")
     

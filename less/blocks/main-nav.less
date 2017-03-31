@@ -1,7 +1,5 @@
 .main-nav {
-
     padding: 0 15px;
-
     background-color: @dark;
 }
 
@@ -23,23 +21,10 @@
     }
 }
 
-.main-nav__toggle {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: none;
-}
-
 .main-nav__items-wrp {
     width: 88%;
     position: relative;
 }
-
-.main-nav__close {
-    display: none;
-}
-
 
 
 .main-nav__items {
@@ -95,7 +80,7 @@
         width: auto;
     }
 
-    .main-nav__toggle {
+    .nav-toggle {
         display: block;
     }
 
@@ -111,7 +96,7 @@
 
     .main-nav__items-wrp--active {
         display: block;
-        .main-nav__close {
+        .nav-close {
             display: block;
         }
     }
@@ -127,13 +112,5 @@
         }
     }
 
-    .main-nav__close {
-        position: absolute;
-        top: 8%;
-        right: 8%;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
+
 }

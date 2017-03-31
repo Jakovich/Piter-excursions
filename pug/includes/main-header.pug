@@ -14,9 +14,9 @@ header.main-header
                           else
                               li(class=["main-nav__item"])
                                   a(href=val, title=key)= key
-                  button.main-nav__close
+                  button.nav-close(data-close="main-nav")
                       img(src="img/icon-close.svg" width="30")
-              button.main-nav__toggle
+              button.nav-toggle(data-nav="main-nav")
                   img(src="img/icon-menu.svg" width="30")
   .wrapper
     h1.main-title Экскурсии для людей
