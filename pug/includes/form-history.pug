@@ -1,3 +1,4 @@
+include ../mixins/svg-sprite.pug
 .form__title
   h4
       | Оставить свою историю
@@ -14,7 +15,7 @@ div(class=["form__btn-wrp", "form__btn-wrp--flex"])
   .form__upload
     label(class=["form__btn", "form__btn--download"])
       span.form__upload-icon
-        img(src="img/upload.svg")
+        +use('img/svgsprites/general-sprite.svg#upload')
       | Прикрепить файлы
       input(type="file" name="history-fale" data-valid="upload")
     .form__upload-result

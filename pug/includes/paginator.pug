@@ -1,0 +1,11 @@
+include ../mixins/svg-sprite.pug
+.paginator
+  a( href="#" class=["paginator__item", "paginator__item--prev"])
+    span.paginator__icon
+      +use('img/svgsprites/general-sprite.svg#paginator')
+    span.paginator__text Невский пр-т,<br> дом 7
+  a(href="#" class=["paginator__item", "paginator__item--next"])
+    span.paginator__text Невский пр-т,<br> дом 9
+    span.paginator__icon
+      +use('img/svgsprites/general-sprite.svg#paginator')
+    

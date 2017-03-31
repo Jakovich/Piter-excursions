@@ -1,6 +1,6 @@
 doctype html
 html
-  - var pageTitle = "Прислать историю"
+  - var pageTitle = "Здания"
   include includes/head.pug
   body
     include includes/main-header.pug
@@ -9,3 +9,12 @@ html
     include includes/page-nav.pug
     .wrapper
       main.main-content
+        include includes/building-info.pug
+        include includes/paginator.pug
+        include includes/comment.pug
+        form.form(name="comment" action="/" method="post")
+          include includes/form-comment.pug
+        
+        
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="js/main.min.js")

@@ -1,3 +1,4 @@
+include ../mixins/svg-sprite.pug
 - var pageMenu = { 'Здания': 'buildings.html', 'Люди': '#', 'Места': '#',  'Маршруты': '#', 'Истории': '#'};
 .wrapper
   nav.page-nav
@@ -11,18 +12,18 @@
                       li(class=["page-nav__item"])
                           a(href=val, title=key)= key
           button.nav-close(data-close="page-nav")
-            img(src="img/icon-close.svg" width="30")
+            +use('img/svgsprites/general-sprite.svg#icon-close')
       if user === 'login'
         .page-nav__user
           span.page-nav__user-icon
-            img(src="img/user.svg" width="21" height="21")
+            +use('img/svgsprites/general-sprite.svg#user')
           a(class="page-nav__login" href="#") Войти
       else if user === 'logout'
         .page-nav__user
           span.page-nav__user-icon
-            img(src="img/user.svg" width="21" height="21")
+            +use('img/svgsprites/general-sprite.svg#user')
           span.page-nav__user-name Евгений
           a(class="page-nav__logout" href="#")  (Выход)
       button.nav-toggle(data-nav="page-nav")
-          img(src="img/icon-menu.svg" width="30")
+          +use('img/svgsprites/general-sprite.svg#icon-menu')
     

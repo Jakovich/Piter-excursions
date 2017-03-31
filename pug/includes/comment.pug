@@ -1,0 +1,19 @@
+include ../mixins/svg-sprite.pug
+.comment
+  .comment__meta
+    img(class="comment__avatar" src="img/avatar.jpg" width="95" height="95")
+    .comment__metadata
+      p
+        span.comment__meta-icon
+          +use('img/svgsprites/general-sprite.svg#user')  
+        span.comment__author Ольга Потапова
+      p
+        span.comment__meta-icon
+          +use('img/svgsprites/general-sprite.svg#comment-date')  
+        span.comment__date 11 апреля 2017 в 12:36
+  .comment__content В 1843 году Санкт-Петербургскому филиалу фирмы требовался молодой помощник и таким образом 19-летний Франц-Фридрих оказался в России. Его жалование составляло 100 рублей ассигнациями или 50 рублей золотом.
+  a.comment__reply(href="#") 
+    span.comment__reply-icon
+      +use('img/svgsprites/general-sprite.svg#reply')  
+    | Ответить
+    

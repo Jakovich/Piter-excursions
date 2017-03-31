@@ -33,6 +33,24 @@ gulp.task('svgstore-social', function () {
         .pipe(gulp.dest('img/svgsprites'));
 });
 
+gulp.task('svgstore-general', function () {
+    return gulp
+        .src('img/general-sprite/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('img/svgsprites'));
+});
+
 gulp.task('html', function buildHTML() {
   return gulp.src('pug/*.pug')
   .pipe(plumber())

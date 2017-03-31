@@ -1,0 +1,9 @@
+.form__title
+  h4
+    | Оставить комментарий
+  a(href="#") Вы вошли как Евгений. Выйти?
+div(class=["form__input-wrp", "form__input-wrp--full"])
+  label(class="form__label form__label--dark" for="coment") Комментарий
+  textarea.form__input(name="comment" id="coment" rows="6" required)
+.form__btn-wrp
+  button.form__btn(type="submit" data-valid="submit") Отправить
