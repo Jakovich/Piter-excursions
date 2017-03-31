@@ -170,6 +170,7 @@
 }
 
 .form__upload {
+    min-width: 300px;
     input {
         display: none;
     }
@@ -189,6 +190,29 @@
         height: 22px;
     }
 }
+
+.form__upload-result {
+    display: none;
+    text-align: left;
+    font-size: 18px;
+}
+
+.form__upload-remove {
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+    transition: @transition;
+    border: none;
+    outline: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    padding: 0;
+    &:hover {
+        color: @orange;
+    }
+}
+
 
 @media (max-width: 768px) {
     .form__btn-wrp--flex {
