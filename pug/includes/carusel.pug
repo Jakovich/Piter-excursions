@@ -1,0 +1,18 @@
+.carusel
+  div.carusel__stage(data-jcarousel="true")
+    .carusel__content
+      ul
+        each val in caruselImgs
+          li
+            img(src=val)
+  .carusel__navigation
+    a(href="#" class="prev prev-navigation" data-jcarouselcontrol="true")
+    a(href="#" class="next next-navigation" data-jcarouselcontrol="true")
+    .cariusel__thimb(data-jcarousel="true")
+      ul
+        each val in caruselImgs
+          li(data-jcarouselcontrol="true" width="50")
+            img(src=val)
+        
+            
+      

@@ -9,6 +9,8 @@ html
     include includes/page-nav.pug
     .wrapper
       main.main-content
+        - var caruselImgs = ['img/building-1.jpg', 'img/building-2.jpg', 'img/building-3.jpg', 'img/building-4.jpg', 'img/building-5.jpg'];
+        include includes/carusel.pug
         include includes/building-info.pug
         include includes/paginator.pug
         include includes/comment.pug
