@@ -11,13 +11,15 @@ div(class=["form__input-wrp", "form__input-wrp--full"])
 .form__title
   h4 Отметить на карте
     button(data-role="toggle") (скрыть)
+div(class="form__map" id="history-map")
+  input(style="display:none" name="history-coordinates" type="text")
 div(class=["form__btn-wrp", "form__btn-wrp--flex"])
   .form__upload
     label(class=["form__btn", "form__btn--download"])
       span.form__upload-icon
         +use('img/svgsprites/general-sprite.svg#upload')
       | Прикрепить файлы
-      input(type="file" name="history-fale" data-valid="upload")
+      input(type="file" name="history-file" data-valid="upload")
     .form__upload-result
       span.form__upload-path
       button.form__upload-remove удалить

@@ -109,6 +109,12 @@ gulp.task("min-js", function(){
   .pipe(uglify())
   .pipe(rename("map.min.js"))
   .pipe(gulp.dest("build/js/"));
+  gulp.src("js/history-map.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("history-map.min.js"))
+  .pipe(gulp.dest("build/js/"));
 });
 
 
@@ -155,6 +161,9 @@ gulp.task("copySprite", function() {
   gulp.src("img/svgsprites/*.svg")
   .pipe(copy())
   .pipe(gulp.dest("build/img/svgsprites"));
+  gulp.src("img/map/**/*")
+  .pipe(copy())
+  .pipe(gulp.dest("build/img/map"));
 });
 
 
