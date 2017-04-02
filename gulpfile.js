@@ -103,6 +103,12 @@ gulp.task("min-js", function(){
   .pipe(uglify())
   .pipe(rename("carousel.min.js"))
   .pipe(gulp.dest("build/js/"));
+  gulp.src("js/map.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("map.min.js"))
+  .pipe(gulp.dest("build/js/"));
 });
 
 
