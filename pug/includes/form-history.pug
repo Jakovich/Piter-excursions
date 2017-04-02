@@ -10,8 +10,8 @@ div(class=["form__input-wrp", "form__input-wrp--full"])
   textarea.form__input(name="history" id="history" rows="6" required placeholder="Расскажите свою историю")
 .form__title
   h4 Отметить на карте
-    button(data-role="toggle") (скрыть)
-div(class="form__map" id="history-map")
+    button(data-toggle="map") (скрыть)
+div(class="form__map" id="history-map" data-content="map")
   input(style="display:none" name="history-coordinates" type="text")
 div(class=["form__btn-wrp", "form__btn-wrp--flex"])
   .form__upload

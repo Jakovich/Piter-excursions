@@ -52,4 +52,17 @@ $(document).ready(function() {
             uploadItem.find('input[type=file]').val('');
         })
     }
+    //toggle function
+
+    $('[data-toggle]').click(function(evt) {
+        evt.preventDefault();
+        var currentItem = $('[data-content="' + this.dataset.toggle + '"]');
+        currentItem.slideToggle(300);
+        if ($(this).text() === '(скрыть)') {
+            $(this).text('(показать)')
+        } else {
+            $(this).text('(скрыть)')
+        }
+    });
+
 })
