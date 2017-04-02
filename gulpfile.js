@@ -97,6 +97,12 @@ gulp.task("min-js", function(){
   .pipe(uglify())
   .pipe(rename("form.min.js"))
   .pipe(gulp.dest("build/js/"));
+  gulp.src("js/carousel.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("carousel.min.js"))
+  .pipe(gulp.dest("build/js/"));
 });
 
 

@@ -8,15 +8,23 @@ html
     - var user = 'login';
     include includes/page-nav.pug
     .wrapper
+      h2.page-title
+        | Невский проспект, дом 8
+      .intro
+        .intro__map
+        .intro__slider
+          - var carouselImgs = ['img/building-1.jpg', 'img/building-2.jpg', 'img/building-3.jpg', 'img/building-4.jpg', 'img/building-5.jpg'];
+          include includes/carousel.pug
       main.main-content
-        - var caruselImgs = ['img/building-1.jpg', 'img/building-2.jpg', 'img/building-3.jpg', 'img/building-4.jpg', 'img/building-5.jpg'];
-        include includes/carusel.pug
         include includes/building-info.pug
         include includes/paginator.pug
         include includes/comment.pug
         form.form(name="comment" action="/" method="post")
           include includes/form-comment.pug
-        
+      include includes/page-bottom--buildings.pug
+    include includes/main-footer.pug    
         
     script(src="https://code.jquery.com/jquery-3.1.1.min.js")
+    script(src="vendor/jCarousel/jquery.jcarousel.min.js")
     script(src="js/main.min.js")
+    script(src="js/carousel.min.js")

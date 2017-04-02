@@ -1,0 +1,161 @@
+/** Stage container **/
+.carousel__stage {
+    width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+/** Navigation container **/
+.carousel__navigation {
+    width: 600px;
+    padding: 10px 30px;
+    margin: 0 auto;
+    position: relative;
+    background-color: @text-color;
+}
+/** Shared carousel styles **/
+.carousel__content {
+    overflow: hidden;
+    position: relative;
+
+    ul {
+        width: 20000em;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+/** Stage carousel specific styles **/
+.carousel__content--stage {
+    height: 265px;
+    background-color: @text-color;
+    li {
+        width: 600px;
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+/** Navigation carousel specific styles **/
+.carousel__content--thimb {
+    height: 94px;
+    width: 100%;
+
+
+    li {
+        cursor: pointer;
+        width: 95px;
+        height: 95px;
+        border: 5px solid @text-color;
+        overflow: hidden;
+        margin: 0 5px;
+        background-size: cover;
+        background-position: top center;
+    }
+
+    li img {
+        display: block;
+        max-width: 100%;
+    }
+
+    li.active{
+        border-color: @orange;
+    }
+}
+/** Stage carousel controls **/
+.next-stage,
+.prev-stage {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 305px;
+    height: 410px;
+    color: #fff;
+}
+
+.prev-stage {
+    left: 0;
+}
+
+.next-stage {
+    right: 0;
+}
+
+.next-stage.inactive,
+.prev-stage.inactive {
+    display: none;
+}
+
+.next-stage span,
+.prev-stage span {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 11px;
+    height: 38px;
+    text-align: center;
+    text-decoration: none;
+    svg {
+        stroke: @orange;
+        width: 11px;
+        height: 38px;
+    }
+}
+
+.prev-stage span {
+    left: 20px;
+}
+
+.next-stage span {
+    right: 20px;
+}
+
+.next-stage:hover span,
+.prev-stage:hover span {
+    display: block;
+}
+/** Navigation carousel controls **/
+.next-navigation,
+.prev-navigation {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 16px/29px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+
+.prev-navigation {
+    left: -15px;
+    top: 22px;
+    text-indent: 6px;
+}
+
+.next-navigation {
+    right: -15px;
+    top: 22px;
+    text-indent: 20px;
+}
+
+.next-navigation.inactive,
+.prev-navigation.inactive {
+    opacity: 0.5;
+    cursor: default;
+}

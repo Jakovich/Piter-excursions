@@ -1,0 +1,25 @@
+include ../mixins/svg-sprite.pug
+.carousel
+  div.carousel__stage
+    div(class=["carousel__content","carousel__content--stage"] data-jcarousel="true")
+      ul
+        each val in carouselImgs
+          li
+            img(src=val)
+      a(href="#" class="prev prev-stage" data-jcarouselcontrol="true")
+        span 
+          +use('img/svgsprites/general-sprite.svg#arrow-right')
+      a(href="#" class="next next-stage" data-jcarouselcontrol="true")
+        span 
+          +use('img/svgsprites/general-sprite.svg#arrow-left')
+  .carousel__navigation
+    a(href="#" class="prev prev-navigation" data-jcarouselcontrol="true") ‹
+    a(href="#" class="next next-navigation" data-jcarouselcontrol="true") ›
+    div(class=["carousel__content","carousel__content--thimb"] data-jcarousel="true")
+      ul
+        each val in carouselImgs
+          li(data-jcarouselcontrol="true" style="background-image: url(" + val + ")")
+            //img(src=val)
+        
+            
+      
