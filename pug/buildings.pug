@@ -11,7 +11,7 @@ html
     .wrapper
       h2.page-title
         | Невский проспект, дом 8
-      .intro
+      div(class=["intro", "intro--flex"])
         div(class="intro__map" id="building-map")
         .intro__slider
           - var carouselImgs = ['img/building-1.jpg', 'img/building-2.jpg', 'img/building-3.jpg', 'img/building-4.jpg', 'img/building-5.jpg'];
@@ -29,4 +29,4 @@ html
     script(src="vendor/jCarousel/jquery.jcarousel.min.js")
     script(src="js/main.min.js")
     script(src="js/carousel.min.js")
-    script(src="js/map.min.js")
+    script(src="js/map-building.min.js")

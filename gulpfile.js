@@ -103,17 +103,23 @@ gulp.task("min-js", function(){
   .pipe(uglify())
   .pipe(rename("carousel.min.js"))
   .pipe(gulp.dest("build/js/"));
-  gulp.src("js/map.js")
+  gulp.src("js/map-index.js")
   .pipe(plumber())
   .pipe(gulp.dest("build/js/"))
   .pipe(uglify())
-  .pipe(rename("map.min.js"))
+  .pipe(rename("map-index.min.js"))
   .pipe(gulp.dest("build/js/"));
-  gulp.src("js/history-map.js")
+  gulp.src("js/map-history.js")
   .pipe(plumber())
   .pipe(gulp.dest("build/js/"))
   .pipe(uglify())
-  .pipe(rename("history-map.min.js"))
+  .pipe(rename("map-history.min.js"))
+  .pipe(gulp.dest("build/js/"));
+  gulp.src("js/map-building.js")
+  .pipe(plumber())
+  .pipe(gulp.dest("build/js/"))
+  .pipe(uglify())
+  .pipe(rename("map-building.min.js"))
   .pipe(gulp.dest("build/js/"));
 });
 

@@ -1,8 +1,27 @@
 .intro {
+
+  position: relative;
+}
+
+.intro--flex {
   display: flex;
 }
 
 .intro__map {
   width: 600px;
   height: 379px;
+}
+
+.intro__map--big {
+  width: 100%;
+  height: 480px;
+  background-image: url('../img/map-index-bg.jpg');
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .intro__map--big {
+
+    height: 320px;
+  }
 }

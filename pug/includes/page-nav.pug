@@ -1,7 +1,7 @@
 include ../mixins/svg-sprite.pug
 - var pageMenu = { 'Здания': 'buildings.html', 'Люди': '#', 'Места': '#',  'Маршруты': '#', 'Истории': 'history-add.html'};
 .wrapper
-  nav.page-nav
+    nav(class=["page-nav", additClass])
       .page-nav__items-wrp
           ul.page-nav__items
               each val, key in pageMenu

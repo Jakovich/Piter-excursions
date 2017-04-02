@@ -11,6 +11,40 @@
     }
 }
 
+.page-nav--index {
+    position: absolute;
+    top: 87px;
+    left:15px;
+    width: 220px;
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    .page-nav__items {
+        display: block;
+        text-align: left;
+        padding: 0;
+        background-color: transparent;
+        a {
+            background-color: @text-color;
+            display: block;
+            padding: 10px;
+            font-size: 31px;
+            font-weight: 400;
+            color: #ffffff;
+            &:hover {
+                color: @orange;
+            }
+        }
+    }
+    .page-nav__item {
+        margin-bottom: 5px;
+    }
+    .page-nav__items-wrp {
+        width:100%;
+        padding: 0;
+    }
+}
+
 
 .page-nav__items {
     padding: 0;
@@ -160,12 +194,51 @@
 
     .page-nav__items {
         display: block;
- position: relative;
+         position: relative;
         a {
             display: block;
             background-color: @gray;
             border-bottom: 1px solid @dark;
             padding: 20px 0;
+        }
+    }
+
+    .page-nav--index {
+        position: absolute;
+        top: 30px;
+        left:15px;
+        width: 220px;
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        .nav-toggle {
+            display: none;
+        }
+        .page-nav__items {
+            display: block;
+            text-align: left;
+            padding: 0;
+            background-color: transparent;
+            a {
+                background-color: @text-color;
+                display: block;
+                padding: 10px;
+                font-size: 25px;
+                font-weight: 400;
+                color: #ffffff;
+                &:hover {
+                    color: @orange;
+                }
+            }
+        }
+        .page-nav__item {
+            margin-bottom: 5px;
+        }
+        .page-nav__items-wrp {
+            position: static;
+            width:100%;
+            display: inline-block;
+            padding: 0;
         }
     }
 

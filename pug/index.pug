@@ -1,19 +1,19 @@
 doctype html
 html
-  head
-    title Питер экскурсии
-    meta(charset="UTF-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    link(rel="stylesheet" href="css/style.min.css")
+  - var pageTitle = "Санкт-Петербург"
+  - var map = 1;
+  include includes/head.pug
   body
-    header.main-header
-      
-      
-  
+    include includes/main-header.pug  
   .wrapper
+    .intro
+      div(class=["intro__map", "intro__map--big"] id="index-map")
+      - var additClass = 'page-nav--index'
+      include includes/page-nav.pug
     include includes/page-bottom.pug
   include includes/main-footer.pug
+    script(src="https://code.jquery.com/jquery-3.1.1.min.js")
   script(src="js/main.min.js")
+  script(src="js/map-index.min.js")
 
   
