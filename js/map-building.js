@@ -15,8 +15,8 @@ ymaps.ready(init);
         }, {
             iconLayout: 'default#image',
             iconImageHref: 'img/map/tooltip-home.svg',
-            iconImageSize: [93, 76],
-            iconImageOffset: [-93, -76]
+            iconImageSize: [93, 75],
+            iconImageOffset: [-93, -75]
         });
 
         myMap.geoObjects.add(myPlacemark);
