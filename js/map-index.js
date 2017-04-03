@@ -1,6 +1,5 @@
 ymaps.ready(init);
-var myMap,
-    myPlacemark;
+var myMap;
 
 function init() {
     myMap = new ymaps.Map("index-map", {
@@ -55,7 +54,6 @@ function init() {
         hint: 'Исаакиевский собор'
     }];
     var myCollection = new ymaps.GeoObjectCollection();
-    var myPalecemark = [];
     for (var i = 0; i < coord.length; i++) {
         myCollection.add(new ymaps.Placemark(coord[i].coord, {
             hintContent: coord[i].hint,

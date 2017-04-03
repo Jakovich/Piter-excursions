@@ -8,13 +8,15 @@ include ../mixins/svg-sprite.pug
             img(src=val)
       a(href="#" class="prev prev-stage" data-jcarouselcontrol="true")
         span 
-          +use('img/svgsprites/general-sprite.svg#arrow-right')
+          +use('img/svgsprites/general-sprite.svg#arrow-left')
       a(href="#" class="next next-stage" data-jcarouselcontrol="true")
         span 
-          +use('img/svgsprites/general-sprite.svg#arrow-left')
+          +use('img/svgsprites/general-sprite.svg#arrow-right')
   .carousel__navigation
-    a(href="#" class="prev prev-navigation" data-jcarouselcontrol="true") ‹
-    a(href="#" class="next next-navigation" data-jcarouselcontrol="true") ›
+    a(href="#" class="prev prev-navigation" data-jcarouselcontrol="true") 
+      +use('img/svgsprites/general-sprite.svg#arrow-left')
+    a(href="#" class="next next-navigation" data-jcarouselcontrol="true") 
+      +use('img/svgsprites/general-sprite.svg#arrow-right')
     div(class=["carousel__content","carousel__content--thimb"] data-jcarousel="true")
       ul
         each val in carouselImgs

@@ -8,8 +8,14 @@
 }
 
 .intro__map {
-  width: 600px;
+  width: 50%;
   height: 379px;
+  background-image: url('../img/map-building-bg.jpg');
+  background-size: cover;
+}
+
+.intro__slider {
+  width: 50%;
 }
 
 .intro__map--big {
@@ -17,6 +23,22 @@
   height: 480px;
   background-image: url('../img/map-index-bg.jpg');
   background-size: cover;
+}
+
+@media (max-width: 1200px) {
+  .intro--flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .intro__slider {
+    width: 100%;
+    max-width: 600px;
+  }
+  .intro__map {
+    width: 100%;
+    max-width: 600px;
+  }
 }
 
 @media (max-width: 768px) {

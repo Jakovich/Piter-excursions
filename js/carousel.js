@@ -13,6 +13,16 @@
         var carouselStage      = $('.carousel__content--stage').jcarousel();
         var carouselNavigation = $('.carousel__content--thimb').jcarousel();
 
+        carouselStage
+            .on('jcarousel:reload jcarousel:create', function () {
+                var carousel = $(this),
+                    width = carousel.innerWidth();
+                carousel.jcarousel('items').css('width', Math.ceil(width) + 'px');
+            })
+            .jcarousel({
+                wrap: 'circular'
+            });
+
         // We loop through the items of the navigation carousel and set it up
         // as a control for an item from the stage carousel.
         carouselNavigation.jcarousel('items').each(function() {

@@ -1,12 +1,12 @@
 /** Stage container **/
 .carousel__stage {
-    width: 600px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
 /** Navigation container **/
 .carousel__navigation {
-    width: 600px;
+    width: 100%;
     padding: 10px 30px;
     margin: 0 auto;
     position: relative;
@@ -76,17 +76,19 @@
     display: block;
     position: absolute;
     top: 0;
-    width: 305px;
-    height: 410px;
+
+    bottom: 0;
     color: #fff;
 }
 
 .prev-stage {
     left: 0;
+    right: 50%;
 }
 
 .next-stage {
     right: 0;
+    left:50%;
 }
 
 .next-stage.inactive,
@@ -99,14 +101,13 @@
     display: none;
     position: absolute;
     top: 50%;
-    width: 11px;
-    height: 38px;
-    text-align: center;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 41px;
     text-decoration: none;
     svg {
-        stroke: @orange;
-        width: 11px;
-        height: 38px;
+        width: 14px;
+        height: 41px;
     }
 }
 
@@ -127,31 +128,23 @@
 .prev-navigation {
     display: block;
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: #4E443C;
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 0 0 1px #000;
-    font: 16px/29px Arial, sans-serif;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
-    -webkit-box-shadow: 0 0 2px #999;
-    -moz-box-shadow: 0 0 2px #999;
-    box-shadow: 0 0 2px #999;
+    width: 14px;
+    height: 41px;
+    top: 50%;
+    transform: translateY(-50%);
+    svg {
+
+        width: 14px;
+        height: 41px;
+    }
 }
 
 .prev-navigation {
-    left: -15px;
-    top: 22px;
-    text-indent: 6px;
+    left: 5px;
 }
 
 .next-navigation {
-    right: -15px;
-    top: 22px;
-    text-indent: 20px;
+    right: 5px;
 }
 
 .next-navigation.inactive,
