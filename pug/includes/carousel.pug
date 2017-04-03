@@ -20,8 +20,8 @@ include ../mixins/svg-sprite.pug
     div(class=["carousel__content","carousel__content--thimb"] data-jcarousel="true")
       ul
         each val in carouselImgs
-          li(data-jcarouselcontrol="true" style="background-image: url(" + val + ")")
-            //img(src=val)
+          li(data-jcarouselcontrol="true")
+            span(style="background-image: url(" + val + ")")
         
             
       
