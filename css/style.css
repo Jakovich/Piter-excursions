@@ -1620,6 +1620,28 @@ template {
         justify-content: center;
   }
 }
+.list-pages {
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+.list-pages li {
+  color: #ffffff;
+  list-style: none;
+  margin-bottom: 15px;
+}
+.list-pages a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #d77d28;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.list-pages a:hover {
+  opacity: 0.8;
+}
 /* Component containers
 ----------------------------------*/
 .ui-widget {
