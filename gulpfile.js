@@ -14,6 +14,7 @@ var svgmin = require('gulp-svgmin');
 var path = require('path');
 var imagemin = require("gulp-imagemin");
 var pug = require('gulp-pug');
+var deploy = require('gulp-gh-pages');
 
 gulp.task('svgstore-social', function () {
     return gulp
@@ -94,6 +95,16 @@ gulp.task("min-js", function() {
             path.extname = ".js"
         }))
         .pipe(gulp.dest("build/js/"));
+});
+
+
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("build/**/*")
+    .pipe(deploy())
 });
 
 
