@@ -102,7 +102,7 @@ gulp.task("min-js", function() {
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', function () {
+gulp.task('deploy', ['build'], function () {
   return gulp.src("build/**/*")
     .pipe(deploy())
 });
