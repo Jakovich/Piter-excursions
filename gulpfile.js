@@ -84,44 +84,18 @@ gulp.task("style", function(){
 });
 
 
-gulp.task("min-js", function(){
-  gulp.src("js/main.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("main.min.js"))
-  .pipe(gulp.dest("build/js/"));
-  gulp.src("js/form.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("form.min.js"))
-  .pipe(gulp.dest("build/js/"));
-  gulp.src("js/carousel.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("carousel.min.js"))
-  .pipe(gulp.dest("build/js/"));
-  gulp.src("js/map-index.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("map-index.min.js"))
-  .pipe(gulp.dest("build/js/"));
-  gulp.src("js/map-history.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("map-history.min.js"))
-  .pipe(gulp.dest("build/js/"));
-  gulp.src("js/map-building.js")
-  .pipe(plumber())
-  .pipe(gulp.dest("build/js/"))
-  .pipe(uglify())
-  .pipe(rename("map-building.min.js"))
-  .pipe(gulp.dest("build/js/"));
+gulp.task("min-js", function() {
+    gulp.src("js/**/*.js")
+        .pipe(plumber())
+        .pipe(gulp.dest("build/js/"))
+        .pipe(uglify())
+        .pipe(rename(function(path) {
+            path.basename += ".min";
+            path.extname = ".js"
+        }))
+        .pipe(gulp.dest("build/js/"));
 });
+
 
 
 gulp.task("image", function(){
