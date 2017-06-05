@@ -5,7 +5,7 @@ include ../mixins/svg-sprite.pug
       ul
         each val in carouselImgs
           li
-            img(src=val)
+            img(src=val alt="")
       a(href="#" class="prev prev-stage" data-jcarouselcontrol="true")
         span 
           +use('img/svgsprites/general-sprite.svg#arrow-left')
